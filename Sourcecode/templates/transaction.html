@@ -1,0 +1,14 @@
+{% include 'head.html'%}
+<div class="row">
+    <div class="col-md-4"></div>
+      <div class="col-md-4">
+          <div class="card p-4 mt-5">
+              {% set seller = getSellerByTransaction(transactions[0][6])%}
+              {% set buyer = getBuyerByTransaction(transactions[0][6])%}
+              <div class="text-secondary">Amount : <b> $ {{transactions[0][5]}}</b></div>
+              <div class="text-secondary">Amount Paid To : <b>{{seller[1]}} ({{seller[3]}})</b>  </div>
+              <div class="text-secondary">Amount Paid By : <b>{{buyer[1]}} ({{buyer[3]}})</b>  </div>
+              <div class="text-secondary">Name On Card: <b>  {{transactions[0][2]}}</b></div>
+          </div>
+      </div>
+</div>

@@ -1,0 +1,16 @@
+{% include 'head.html'%}
+<div class="container mt-5">
+    <div class="row">
+        {% for comment in comments %}
+        {% set user = getUserByLikes(comment[4])%}
+        <div class="col-md-4">
+            <div class="card p-3"  style="background-color:">
+                <div class="text-center ">Comment BY : {{user[1]}}</div>
+                  <div class="text-center" style="font-size:10px">{{comment[1]}}</div>
+                <div class="text-center" style="font-size:13px">Comment : {{comment[2]}}</div>
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

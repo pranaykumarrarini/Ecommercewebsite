@@ -1,0 +1,15 @@
+{% include 'head.html'%}
+<div class="container mt-5">
+    <div class="row">
+        {% for share in shares %}
+        {% set user = getUserByLikes(share[3])%}
+        <div class="col-md-4">
+            <div class="card p-3"  style="background-color:">
+                <div class="text-center ">Shared BY : {{user[1]}}</div>
+                  <div class="text-center" style="font-size:10px">{{share[1]}}</div>
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

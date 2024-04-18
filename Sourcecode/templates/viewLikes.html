@@ -1,0 +1,15 @@
+{% include 'head.html'%}
+<div class="container mt-5">
+    <div class="row">
+        {% for like in likes %}
+        {% set user = getUserByLikes(like[3])%}
+        <div class="col-md-4">
+            <div class="card p-3"  style="background-color:">
+                <div class="text-center ">Liked BY : {{user[1]}}</div>
+                  <div class="text-center" style="font-size:10px">{{like[1]}}</div>
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

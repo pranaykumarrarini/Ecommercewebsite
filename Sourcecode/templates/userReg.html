@@ -1,0 +1,87 @@
+{% include 'title.html'%}
+<head>
+<style>
+body {
+  background-image: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX22243987.jpg");
+  background-size: cover;
+  height:200px;
+}
+  #password{
+    border-radius: 15px;
+
+    }
+     #phone{
+    border-radius: 15px;
+
+    }
+      #isSeller{
+    border-radius: 15px;
+
+    }
+      #name{
+    border-radius: 15px;
+
+    }
+       #email{
+    border-radius: 15px;
+
+    }
+       #address{
+    border-radius: 15px;
+    }
+     #dob{
+    border-radius: 15px;
+    }
+</style>
+</head>
+<div class="container">
+    <div class="card p-3 mt-5">
+        <form action="userReg1" method="post">
+            <div class="text-center" style="font-size:100%">User Registration</div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text"  class="form-control" name="name" id="name" placeholder="Enter your Name" required>
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email"  class="form-control" placeholder="Enter your Email" required>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" name="phone" id="phone"  class="form-control mt-1" placeholder="Enter your Phone Number" required>
+                    </div>
+                    <div class="form-group mt-1 ">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password"  class="form-control mt-1" placeholder="Enter Password" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group mt-3">
+                        <label for="gender">Gender</label>
+                        <input type="radio" class="" id="gender"  value="male" name="gender" required> <label for="gender">Male</label>
+                        <input type="radio" id="gender1" name="gender" value="female" required> <label for="gender">FeMale</label>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="userType">UserType</label>
+                        <select id="userType" class="form-control" name="userType" required>
+                            <option value="Seller">seller</option>
+                            <option value="Buyer">buyer</option>
+                        </select>
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="dob">Date OF Birth</label>
+                        <input type="date" id="dob" name="dob" class="form-control"  required>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="address">Address</label>
+                        <textarea id="address" name="address" cols="" placeholder="Address" class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Register" class="btn btn-success w-100 mt-4">
+            <a href="/email_verification">Verity Your Email before Registeration</a>
+        </form>
+    </div>
+</div>
